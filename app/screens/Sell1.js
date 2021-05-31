@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useState } from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
@@ -7,14 +6,17 @@ function RequirementSummary({ navigation }) {
     return (
         <View styles={styles.container}>
             <View style={styles.RectangleShapeView}>
-            <Image style={styles.image} source={ require('../../assets/Back.png')}/>
-            <Text style={styles.textstyle}> Requirement Summary</Text>
-            <Image style={styles.image} source={ require('../../assets/Price_.png')}/>
+            <Image style={styles.image} source={ require('../../assets/humburger.png')}/>
+            <Text style={styles.textstyle}> Sell on BAZZAR for free</Text>
+           
+           </View>
+           <View>
+               <Image style={styles.image1} source={ require('../../assets/Sell_On.png')}/>
            </View>
             <View>
             <TouchableOpacity
                 style={[styles.button, styles.buttonClose]}>
-               <Text style={styles.textStyle}>FINISH</Text>
+               <Text style={styles.textStyle}>Verify Now</Text>
                </TouchableOpacity>
             </View>
         </View>
@@ -63,7 +65,7 @@ function RequirementSummary({ navigation }) {
 
           buttonClose: {
             backgroundColor: '#45B39D',
-            width:'60%',
+            width:'30%',
             marginTop:300,
             marginBottom: 30,
             marginLeft: 70,
@@ -83,5 +85,10 @@ function RequirementSummary({ navigation }) {
               marginLeft: 8,
               marginTop: 15,
           },
-
+         
+          image1:{
+            height: 50,
+            width: 50,
+           alignItems:"center",
+        },
 });
