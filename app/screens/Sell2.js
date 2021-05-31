@@ -5,7 +5,7 @@ import { StatusBar } from "expo-status-bar";
 import  { useState } from "react";
 
 function RequirementSummary({ navigation }) {
-    const [email, setEmail,] = useState("");
+    const [Bname, setBNAME] = useState("");
     return (
         
         <View styles={styles.container}>
@@ -15,17 +15,24 @@ function RequirementSummary({ navigation }) {
             <Text style={styles.textstyle}> Sell on BAZZAR for free</Text>
            
            </View>
+           <View style={{flexDirection:'row', alignItems:'center',justifyContent:'center', }}>
+           <Image style={styles.image1} source={ require('../../assets/1.png')}/>
+           <Image style={styles.image1} source={ require('../../assets/2.png')}/>
+           <Image style={styles.image1} source={ require('../../assets/3.png')}/>
+           <Image style={styles.image1} source={ require('../../assets/4.png')}/>
+           </View>
            <View  style={styles.imgcont}>
-               <Image style={styles.image1} source={ require('../../assets/Sell_On.png')}/>
-               <Text style={styles.inputtext}>Verify your contact details to start selling</Text>
+              
+               <Text style={styles.inputtext}><Text style={styles.boldtext}>Hi Angle,</Text> Start your journey with online Marketplace for
+                <Text style={styles.boldtext}>FREE</Text></Text>
                <View style={styles.inputView}>
     
         <TextInput
           style={styles.TextInput}
-          placeholder="Verify email"
-          placeholderTextColor="black"
+          placeholder="Enter Your Business Name *"
+          placeholderTextColor="grey"
           maxLength = {40}
-          onChangeText={(email) => setEmail(email)}
+          onChangeText={(Bname) => setBNAME(Bname)}
         />
       </View>
  
@@ -33,11 +40,9 @@ function RequirementSummary({ navigation }) {
             <View>
             <TouchableOpacity
                 style={[styles.button, styles.buttonClose]}>
-               <Text style={styles.textStyle}>Verify Now</Text>
+               <Text style={styles.textStyle}>Next</Text>
                </TouchableOpacity>
-               <TouchableOpacity>
-                   <Text style={styles.skiptext}>Skip Now</Text>
-               </TouchableOpacity>
+              
             </View>
         </View>
       
@@ -99,6 +104,11 @@ function RequirementSummary({ navigation }) {
            
           },
 
+          boldtext:{
+             fontWeight: 'bold',
+             },
+
+
           inputtext:{
 
             color: 'black',
@@ -107,15 +117,7 @@ function RequirementSummary({ navigation }) {
           },
 
           
-          skiptext:{
-
-            color: 'black',
-            textAlign: 'center',
-            fontSize: 15,
-            marginTop: 5,
-            color: '#45B39D',
-          },
-
+         
 
           image:{
               height: 30,
@@ -125,9 +127,10 @@ function RequirementSummary({ navigation }) {
           },
          
           image1:{
-            height: 70,
-            width: 70,
-           alignItems:"center",
+            height: 30,
+            width: 30,
+           marginTop: 15,
+           marginRight: 25
         },
 
         imgcont:{
