@@ -11,12 +11,19 @@ import Sell4 from './app/screens/Sell4';
 import Sell5 from './app/screens/Sell5';
 import Sell6 from './app/screens/Sell6';
 import Congrats from './app/screens/Congrats';
+import Lang from './app/screens/Lang';
+import Confirm from './app/screens/Confirm';
+import Sell7 from './app/screens/Sell7';
+import Payment from './app/screens/Payment';
+import Login from './app/screens/Login';
+
+
 const Stack = createStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Congrats">
+      <Stack.Navigator initialRouteName="Login">
       <Stack.Screen name="Feedback" component={Feedback} />
       <Stack.Screen name="RequirementSummary" component={RequirementSummary} />
       <Stack.Screen name="Sell1" component={Sell1} />
@@ -26,9 +33,15 @@ function App() {
       <Stack.Screen name="Sell5" component={Sell5} />
       <Stack.Screen name="Sell6" component={Sell6} />
       <Stack.Screen name="Congrats" component={Congrats} />
+      <Stack.Screen name="Lang" component={Lang} />
+      <Stack.Screen name="Confirm" component={Confirm} />
+      <Stack.Screen name="Sell7" component={Sell7} />
+      <Stack.Screen name="Payment" component={Payment} />
+      <Stack.Screen name="Login" component={Login} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
 export default App;
+
