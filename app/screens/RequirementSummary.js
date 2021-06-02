@@ -3,6 +3,7 @@ import { useState } from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
+
 function RequirementSummary({ navigation }) {
     return (
         <View styles={styles.container}>

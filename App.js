@@ -16,6 +16,9 @@ import Confirm from './app/screens/Confirm';
 import Sell7 from './app/screens/Sell7';
 import Payment from './app/screens/Payment';
 import Login from './app/screens/Login';
+import Search from './app/screens/Search';
+import PostR from './app/screens/PostR';
+import  Share  from './app/screens/Share';
 
 
 const Stack = createStackNavigator();
@@ -23,7 +26,7 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
+      <Stack.Navigator initialRouteName="Share">
       <Stack.Screen name="Feedback" component={Feedback} />
       <Stack.Screen name="RequirementSummary" component={RequirementSummary} />
       <Stack.Screen name="Sell1" component={Sell1} />
@@ -38,6 +41,9 @@ function App() {
       <Stack.Screen name="Sell7" component={Sell7} />
       <Stack.Screen name="Payment" component={Payment} />
       <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Search" component={Search} />
+      <Stack.Screen name="PostR" component={PostR} />
+      <Stack.Screen name="Share" component={Share} />
       </Stack.Navigator>
     </NavigationContainer>
   );
